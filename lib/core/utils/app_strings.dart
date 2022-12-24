@@ -57,9 +57,24 @@ class AppStrings {
   static String Hello = "Hello".tr();
   static String Needtoshipgoods = "Need to ship goods?".tr();
   static String RequestShipment = "Request Shipment".tr();
-  static String Home = "Home".tr();
   static String History = "History".tr();
   static String Requests = "Requests".tr();
+
+  static String requests = "Requests".tr();
+  static String requestDate = "2021/2/23".tr();
+  static String requestNumber = "763#".tr();
+  static String home = "Home".tr();
+  static String shippings = "Shippings".tr();
+  static String notification = "Notification".tr();
+  static String product = "Frozen Potatoes".tr();
+  static String productType = "Product Type".tr();
+  static String shipmentWeight = "Shipment Weight".tr();
+  static String shipmentDate = "Shipment Date".tr();
+  static String shipmentTime = "Shipment Time".tr();
+  static String shipmentPrice = "Price".tr();
+  static String shipmentType = "Type".tr();
+  static String shipmentLocation = "Shipment Location".tr();
+  static String deliveryLocation = "Delivery Location".tr();
 
   // drawer
   static String Ratings = "Ratings".tr();

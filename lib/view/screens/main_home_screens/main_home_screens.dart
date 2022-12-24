@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:terilla_contractor/core/utils/icons_manager.dart';
 import 'package:terilla_contractor/view/screens/main_home_screens/requests%20screen/requests_screen.dart';
 
 import '../../../core/utils/app_assets.dart';
@@ -8,6 +9,7 @@ import '../../../core/utils/app_strings.dart';
 import '../../widgets/my_app_bar.dart';
 import 'app drawer/App_drawer.dart';
 import 'home screen/home_screen.dart';
+import 'notification_screen/notification_screen.dart';
 
 class MainHomeScreen extends StatefulWidget {
   const MainHomeScreen({super.key});
@@ -29,8 +31,8 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
 
   Widget getBody(int pageIndex) {
     List<Widget> pages = [
-      Container(),
-      const HomeScreen(),
+      NotificationScreen(),
+      HomeScreen(),
       const RequestsScreen(),
     ];
     return pages[pageIndex];
@@ -92,22 +94,22 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: onChangePage,
         currentIndex: currentPageIndex,
+        elevation: 30,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            label: AppStrings.History,
+            icon: SvgPicture.asset(notification2),
+            activeIcon: SvgPicture.asset(notificationActive),
+            label: AppStrings.notification,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: AppStrings.Home,
+            icon: SvgPicture.asset(home),
+            activeIcon: SvgPicture.asset(homeActive),
+            label: AppStrings.home,
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              AppAssets.requestsIcon,
-              width: 60,
-              color: currentPageIndex == 2 ? AppColors.primary : AppColors.head,
-            ),
-            label: AppStrings.Requests,
+            icon: SvgPicture.asset(truck),
+            activeIcon: SvgPicture.asset(truckActive),
+            label: AppStrings.shippings,
           ),
         ],
       ),

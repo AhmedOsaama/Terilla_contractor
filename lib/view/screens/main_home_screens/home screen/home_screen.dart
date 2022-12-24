@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:terilla_contractor/config/routes/app_navigator.dart';
+import 'package:terilla_contractor/core/utils/icons_manager.dart';
+import 'package:terilla_contractor/core/utils/style_utils.dart';
+import 'package:terilla_contractor/view/components/request_container.dart';
+import 'package:terilla_contractor/view/components/request_info.dart';
 import 'package:terilla_contractor/view/screens/main_home_screens/main_home_screens.dart';
+import 'package:terilla_contractor/view/widgets/request_widget.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -19,96 +26,85 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(AppAssets.homeBackGround),
-          fit: BoxFit.cover,
+    return SingleChildScrollView(
+      child: Container(width: double.infinity,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(241, 242, 246, 1)
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+              Text(AppStrings.requests,style: TextStyles.textViewBold17.copyWith(color: Color.fromRGBO(166, 184, 204, 1)),),
+            ...List.generate(3, (index) =>
+                RequestWidget(children: [
+                  RequestContainer(
+                      child: Row(
+                        children: [
+                          RequestInfo(iconPath: truck2, infoCategory: AppStrings.productType, infoText: AppStrings.product),
+                          Spacer(),
+                          RequestInfo(iconPath: weight, infoCategory: AppStrings.shipmentWeight, infoText: "50 Tons"),
+                          Spacer(),
+                        ],
+                      )),
+                  SizedBox(height: 16.h,),
+                  RequestContainer(
+                      child: Row(
+                        children: [
+                          RequestInfo(iconPath: calendar, infoCategory: AppStrings.shipmentDate, infoText: "2021/2/23"),
+                          Spacer(),
+                          RequestInfo(iconPath: clock, infoCategory: AppStrings.shipmentTime, infoText: "10:00 AM"),
+                          Spacer(),
+                        ],
+                      )),
+                  SizedBox(height: 16.h,),
+                  RequestContainer(child: Column(
+                    children: [
+                      RequestInfo(iconPath: location, infoCategory: AppStrings.shipmentLocation, infoText: "القليوبية - مدينة العبور - مزارع عرابي - شارع 23 - مبنى 15"),
+                      Divider(height: 20.h,),
+                      RequestInfo(iconPath: location, infoCategory: AppStrings.deliveryLocation, infoText: "بنها - كفر السرايا - شارع 59 - مزرعة")
+                    ],
+                  )),
+                  SizedBox(height: 16.h,),
+                  RequestContainer(
+                      child: Row(
+                        children: [
+                          RequestInfo(iconPath: money, infoCategory: AppStrings.shipmentPrice, infoText: "1300 EGP"),
+                          Spacer(),
+                          RequestInfo(infoCategory: AppStrings.shipmentType, infoText: "Services"),
+                          Spacer(),
+                        ],
+                      )),
+                  SizedBox(height: 16.h,),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Row(
+                      children: [
+                        Expanded(child: ElevatedButton(
+                          onPressed: (){},
+                          child: Text("Transfer to a car",style: TextStyles.textViewSemiBold14,),
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            backgroundColor: AppColors.lightPrimary,
+                          ),
+                        )),
+                        SizedBox(width: 20.w,),
+                        Expanded(child: ElevatedButton(
+                          onPressed: (){},
+                          child: Text("Abort",style: TextStyles.textViewSemiBold14,),
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            backgroundColor: AppColors.darkPrimary.withOpacity(0.25),
+                          ),
+                        )),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 30.h,),
+                ]))
+          ],
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 70),
-          Expanded(
-            child: RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: '${AppStrings.Terilla},',
-                    style: const TextStyle(
-                      color: AppColors.primary,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  TextSpan(
-                    text: AppStrings.weunderstandthattravelinglongdistances,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(30),
-            decoration: BoxDecoration(
-              color: AppColors.darkColot,
-              borderRadius: BorderRadius.circular(22),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                  text: TextSpan(
-                    style: const TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: '${AppStrings.Hello}, ',
-                      ),
-                      TextSpan(
-                        text: DemoData.userData.name,
-                        style: const TextStyle(
-                          color: AppColors.primary,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: double.infinity, height: 24),
-                Text(
-                  AppStrings.Needtoshipgoods,
-                  style: const TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(height: 40),
-                MyButton(
-                  onClick: () {
-                    AppNavigator.pushReplacement(context: context, screen: MainHomeScreen());
-                    // Navigator.pushNamed(context, AppRoutes.addRequest);
-                  },
-                  title: AppStrings.RequestShipment,
-                  width: double.infinity,
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 24),
-        ],
-      ),
-    ); //TODO: Change this
+    );
   }
 }

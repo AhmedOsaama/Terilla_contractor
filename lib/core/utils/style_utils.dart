@@ -107,6 +107,11 @@ abstract class TextStyles {
     fontWeight: FontWeight.bold,
     fontFamily: fontFamily,
   );
+  static TextStyle textViewBold17 = TextStyle(
+    fontSize: 17.sp,
+    fontWeight: FontWeight.bold,
+    fontFamily: fontFamily,
+  );
   static TextStyle textViewLineThroughBold16 = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.bold,
@@ -212,6 +217,12 @@ abstract class TextStyles {
 
   static TextStyle textViewSemiBold16 = TextStyle(
     fontSize: 16.sp,
+    fontWeight: semiBold,
+    fontFamily: fontFamily,
+  );
+
+  static TextStyle textViewSemiBold18 = TextStyle(
+    fontSize: 18.sp,
     fontWeight: semiBold,
     fontFamily: fontFamily,
   );

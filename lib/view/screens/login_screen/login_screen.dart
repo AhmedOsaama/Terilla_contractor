@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:terilla_contractor/config/routes/app_navigator.dart';
 import 'package:terilla_contractor/view/screens/main_home_screens/home%20screen/home_screen.dart';
+import 'package:terilla_contractor/view/screens/main_home_screens/main_home_screens.dart';
 import 'package:terilla_contractor/view/screens/signup_screen/signup_screen.dart';
 import 'package:terilla_contractor/view/widgets/my_text_field.dart';
 
@@ -64,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 MyButton(
                   onClick: () {
                     //TODO signin
-                    AppNavigator.pushReplacement(context: context, screen: HomeScreen());
+                    AppNavigator.pushReplacement(context: context, screen: MainHomeScreen());
                     // Navigator.pushReplacementNamed(context, AppRoutes.home);
                   },
                   title: AppStrings.SignIn,
