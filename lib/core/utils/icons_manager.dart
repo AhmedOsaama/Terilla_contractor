@@ -20,5 +20,10 @@ const String notificationTruck = '$imgPath/notification_truck.svg';
 const String notificationTruck2 = '$imgPath/notification_truck2.svg';
 const String success = '$imgPath/success.svg';
 const String canceled = '$imgPath/canceled.svg';
+const String border = '$imgPath/border.svg';
+const String camera = '$imgPath/camera.svg';
+const String vehicle = '$imgPath/vehicle.svg';
+const String moneyCase = '$imgPath/money_case.svg';
+const String call = '$imgPath/call.svg';
 
 

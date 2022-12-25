@@ -1,33 +1,5 @@
-const String imgPath = 'assets/images';
+const String imgPath = 'assets/imgs';
 
-const String test = '$imgPath/test.svg';
-const String introImage = '$imgPath/intro_image.png';
-const String splashImage = '$imgPath/splash.svg';
+const String carImage = "assets/imgs/car.png";
 const String personImage = '$imgPath/person.png';
-const String sliderImage1 = '$imgPath/slider1.png';
-const String icon1365 = '$imgPath/icon1.png';
-const String icon2365 = '$imgPath/icon2.png';
-const String icon3365 = '$imgPath/icon3.png';
-const String homeSaleImage = '$imgPath/home_sale_page.png';
-const String brand1 = '$imgPath/Brands_1.png';
-const String brand2 = '$imgPath/Brands 2.png';
-const String brand3 = '$imgPath/Brands 3.png';
-const String productImage = '$imgPath/product.png';
-const String profileImage = '$imgPath/profile-pic.png';
-const String cash1 = '$imgPath/cash1.png';
-const String orange = '$imgPath/orange.png';
-const String masterCardSvg = '$imgPath/master_card.png';
-const String myfawrySvg = '$imgPath/my_fawry.png';
-const String deliveryManImage = '$imgPath/delivery_person.png';
-const String logo1 = '$imgPath/logo1.png';
-const String logo2 = '$imgPath/logo2.png';
-const String image1 = '$imgPath/image1.png';
-const String macLogo = '$imgPath/mac_logo.png';
-const String graphicImage = '$imgPath/graphic.png';
-const String profileCoverImage = '$imgPath/profile_cover.png';
-const String drinkImage = '$imgPath/drink.png';
-const String addressImage = '$imgPath/address.png';
-const String mapLargeImage = '$imgPath/map_large.png';
-const String mapSmallImage = '$imgPath/map_small.png';
-const String campaignImage = '$imgPath/campaign.png';
-const String giftImage = '$imgPath/gift.png';
+

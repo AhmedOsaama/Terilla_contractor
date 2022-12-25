@@ -63,32 +63,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           },
           icon: SvgPicture.asset(AppAssets.drawerIcon),
         ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                // Navigator.pushNamed(context, AppRoutes.notification);
-              },
-              icon: Stack(
-                children: [
-                  SvgPicture.asset(AppAssets.notificationIcon),
-                  // check if have notification or no
-                  if (true)
-                    Positioned(
-                      top: 4,
-                      right: 4,
-                      child: Container(
-                        height: 10,
-                        width: 10,
-                        decoration: const BoxDecoration(
-                          color: AppColors.primary,
-                          shape: BoxShape.circle,
-                        ),
-                      ),
-                    ),
-                ],
-              )),
-          const SizedBox(width: 10),
-        ],
+
       ),
       body: getBody(currentPageIndex),
       bottomNavigationBar: BottomNavigationBar(

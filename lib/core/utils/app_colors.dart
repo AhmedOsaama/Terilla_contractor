@@ -4,6 +4,9 @@ class AppColors {
   static const Color primary = Color(0xffEF651E);
   static const Color lightPrimary = Color(0xffFF8900);
   static const Color darkPrimary = Color.fromRGBO(36, 46, 66, 1);
+  static const Color darkPrimaryHalf = Color.fromRGBO(36, 46, 66, 0.5);
+  static const Color selectedContainer = Color.fromRGBO(255, 229, 206, 1);
+  static const Color sectionHeader = Color.fromRGBO(36, 46, 66, 0.38);
   static const Color card = Color(0x1A777777);
   static const Color data = Color(0xffB9B9B9);
   static const Color body = Color(0xff7C7C7C);

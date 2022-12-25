@@ -76,6 +76,30 @@ class AppStrings {
   static String shipmentLocation = "Shipment Location".tr();
   static String deliveryLocation = "Delivery Location".tr();
 
+  //cars screen
+  static String cars = "Cars".tr();
+  static String pickACar = "Pick a Car".tr();
+  static String carName = "Mercedes Actros - 2021".tr();
+  static String weight = "Weight".tr();
+  static String confirm = "Confirm".tr();
+
+  //add car screen
+  static String addCar = "Add Car".tr();
+  static String carImage = "Car Image".tr();
+  static String licenseImage = "License Image".tr();
+  static String carModel = "Car Model".tr();
+  static String carType = "Car Type".tr();
+  static String weightPayload = "Weight Payload(Ton)".tr();
+
+  //transportation detail screen
+  static String transportationWillStartIn = "Transportation Will Start in 26/8/2022".tr();
+  static String clientInfo = "Client Info".tr();
+  static String numberOfRequests = "Number of Requests".tr();
+  static String requestInfo = "Request Info".tr();
+  static String beginTransportation = "Begin Transportation".tr();
+  static String phoneNumber = "Phone Number".tr();
+
+
   // drawer
   static String Ratings = "Ratings".tr();
   static String TotalRequests = "Total Requests".tr();

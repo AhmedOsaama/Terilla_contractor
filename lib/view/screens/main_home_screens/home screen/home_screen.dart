@@ -6,6 +6,7 @@ import 'package:terilla_contractor/core/utils/icons_manager.dart';
 import 'package:terilla_contractor/core/utils/style_utils.dart';
 import 'package:terilla_contractor/view/components/request_container.dart';
 import 'package:terilla_contractor/view/components/request_info.dart';
+import 'package:terilla_contractor/view/screens/car_selection_screen/car_selection_screen.dart';
 import 'package:terilla_contractor/view/screens/main_home_screens/main_home_screens.dart';
 import 'package:terilla_contractor/view/widgets/request_widget.dart';
 
@@ -81,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       children: [
                         Expanded(child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: () => AppNavigator.push(context: context, screen: CarSelectionScreen()),
                           child: Text("Transfer to a car",style: TextStyles.textViewSemiBold14,),
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

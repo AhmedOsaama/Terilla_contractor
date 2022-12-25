@@ -22,7 +22,6 @@ class RequestWidget extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 50.h,
-            clipBehavior: Clip.hardEdge,
             padding: const EdgeInsets.symmetric(horizontal: 20),
             decoration: const BoxDecoration(
                 color: AppColors.darkPrimary,
