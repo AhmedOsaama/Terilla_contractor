@@ -9,7 +9,7 @@ import 'driver.dart';
 import 'journy_step.dart';
 import 'order_state.dart';
 
-class Request {
+class Order {
   int id;
   String productType = DemoData.productsType[0];
   int productWeight = 0;
@@ -59,7 +59,7 @@ class Request {
     ),
   ];
 
-  Request({
+  Order({
     required this.id,
     required this.state,
     this.driver,

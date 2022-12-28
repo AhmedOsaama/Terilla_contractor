@@ -10,9 +10,9 @@ import '../../core/utils/style_utils.dart';
 class RequestInfo extends StatelessWidget {
   final String? iconPath;
   final String infoCategory;
-  final String infoText;
+  final String valueText;
 
-  const RequestInfo({Key? key, this.iconPath, required this.infoCategory, required this.infoText}) : super(key: key);
+  const RequestInfo({Key? key, this.iconPath, required this.infoCategory, required this.valueText}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class RequestInfo extends StatelessWidget {
                     color: AppColors.darkPrimary.withOpacity(0.38)
                 ),),
                 SizedBox(width: 15.w,),
-        Text(infoText,style: TextStyles.textViewMedium14.copyWith(color: AppColors.darkPrimary),),
+        Text(valueText,style: TextStyles.textViewMedium14.copyWith(color: AppColors.darkPrimary),),
               ],
             )
           ],

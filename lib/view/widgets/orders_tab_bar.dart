@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../core/utils/app_colors.dart';
 import '../../data/models/order_state.dart';
 
-class RequstsTap extends StatelessWidget {
+class OrdersTabBar extends StatelessWidget {
   OrderState orderState;
   Function(OrderState) onClick;
   bool isSelected;
-  RequstsTap({
+  OrdersTabBar({
     Key? key,
     required this.orderState,
     required this.onClick,
@@ -19,17 +19,15 @@ class RequstsTap extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        InkWell(
+        GestureDetector(
           onTap: () {
             onClick(orderState);
           },
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
           child: Container(
             padding: const EdgeInsets.symmetric(
                 horizontal: 14, vertical: 8),
             decoration: BoxDecoration(
-              color: isSelected ? orderState.getColor() : AppColors.card,
+              color: isSelected ? AppColors.lightPrimary : AppColors.card,
               borderRadius: BorderRadius.circular(6),
             ),
             child: Text(

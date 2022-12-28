@@ -42,9 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   RequestContainer(
                       child: Row(
                         children: [
-                          RequestInfo(iconPath: truck2, infoCategory: AppStrings.productType, infoText: AppStrings.product),
+                          RequestInfo(iconPath: truck2, infoCategory: AppStrings.productType, valueText: AppStrings.product),
                           Spacer(),
-                          RequestInfo(iconPath: weight, infoCategory: AppStrings.shipmentWeight, infoText: "50 Tons"),
+                          RequestInfo(iconPath: weight, infoCategory: AppStrings.shipmentWeight, valueText: "50 Tons"),
                           Spacer(),
                         ],
                       )),
@@ -52,27 +52,27 @@ class _HomeScreenState extends State<HomeScreen> {
                   RequestContainer(
                       child: Row(
                         children: [
-                          RequestInfo(iconPath: calendar, infoCategory: AppStrings.shipmentDate, infoText: "2021/2/23"),
+                          RequestInfo(iconPath: calendar, infoCategory: AppStrings.shipmentDate, valueText: "2021/2/23"),
                           Spacer(),
-                          RequestInfo(iconPath: clock, infoCategory: AppStrings.shipmentTime, infoText: "10:00 AM"),
+                          RequestInfo(iconPath: clock, infoCategory: AppStrings.shipmentTime, valueText: "10:00 AM"),
                           Spacer(),
                         ],
                       )),
                   SizedBox(height: 16.h,),
                   RequestContainer(child: Column(
                     children: [
-                      RequestInfo(iconPath: location, infoCategory: AppStrings.shipmentLocation, infoText: "القليوبية - مدينة العبور - مزارع عرابي - شارع 23 - مبنى 15"),
+                      RequestInfo(iconPath: location, infoCategory: AppStrings.shipmentLocation, valueText: "القليوبية - مدينة العبور - مزارع عرابي - شارع 23 - مبنى 15"),
                       Divider(height: 20.h,),
-                      RequestInfo(iconPath: location, infoCategory: AppStrings.deliveryLocation, infoText: "بنها - كفر السرايا - شارع 59 - مزرعة")
+                      RequestInfo(iconPath: location, infoCategory: AppStrings.deliveryLocation, valueText: "بنها - كفر السرايا - شارع 59 - مزرعة")
                     ],
                   )),
                   SizedBox(height: 16.h,),
                   RequestContainer(
                       child: Row(
                         children: [
-                          RequestInfo(iconPath: money, infoCategory: AppStrings.shipmentPrice, infoText: "1300 EGP"),
+                          RequestInfo(iconPath: money, infoCategory: AppStrings.shipmentPrice, valueText: "1300 EGP"),
                           Spacer(),
-                          RequestInfo(infoCategory: AppStrings.shipmentType, infoText: "Services"),
+                          RequestInfo(infoCategory: AppStrings.shipmentType, valueText: "Services"),
                           Spacer(),
                         ],
                       )),

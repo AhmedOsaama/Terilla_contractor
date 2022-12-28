@@ -109,20 +109,20 @@ class AppStrings {
   static String Notifications = "Notifications".tr();
   static String Logout = "Logout".tr();
 
-  // history
+  // order state
   static String FilterDate = "Filter Date".tr();
   static String EGP = "EGP".tr();
   static String PM = "PM".tr();
   static String AM = "AM".tr();
 
-  static String Pending = "Pending".tr();
-  static String Completed = "Completed".tr();
-  static String Rejected = "Rejected".tr();
-  static String Canceled = "Canceled".tr();
-  static String Inprogress = "Inprogress".tr();
+  static String pending = "Pending".tr();
+  static String completed = "Completed".tr();
+  static String all = "All".tr();
+  static String inProgress = "In Progress".tr();
 
-  // requsts
+  // transportation screen
   static String Today = "Today".tr();
+  static String more = "More".tr();
 
   // profile
   static String Profile = "Profile".tr();

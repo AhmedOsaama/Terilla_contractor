@@ -25,5 +25,8 @@ const String camera = '$imgPath/camera.svg';
 const String vehicle = '$imgPath/vehicle.svg';
 const String moneyCase = '$imgPath/money_case.svg';
 const String call = '$imgPath/call.svg';
+const String inProgressDelivery = '$imgPath/in_progress_delivery.svg';
+const String completedDelivery = '$imgPath/completed_delivery.svg';
+const String pendingDelivery = '$imgPath/pending_delivery.svg';
 
 

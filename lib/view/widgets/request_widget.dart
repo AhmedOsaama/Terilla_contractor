@@ -18,6 +18,7 @@ class RequestWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: double.infinity,

@@ -6,7 +6,7 @@ import 'notification_type.dart';
 class AppNotification {
   int id;
   String message;
-  Request order;
+  Order order;
   NotificationType notificationType;
   AppNotification({
     required this.id,

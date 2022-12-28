@@ -21,74 +21,63 @@ class DemoData {
       totalRequests: 32,
       totalShipments: 26);
 
-  static List<Request> oldRequests = [
-    Request(
-      id: 0,
-      state: OrderState.Compleated,
-      driver: Driver(
-          id: 0,
-          user: User(
-              id: 0,
-              name: "Ahmed Magdy",
-              image:
-                  "https://caricom.org/wp-content/uploads/Floyd-Morris-Remake-1024x879-1.jpg",
-              rank: "Gold Member",
-              phone: "0122158746",
-              email: "ahmedmagdy@gmail.com",
-              rate: 3.5,
-              totalRequests: 32,
-              totalShipments: 26),
-          vehicle: Vehicle(
-              id: 0, model: "Mercedes - Actros - White ", number: "BWG - 172")),
-    ),
-    Request(
+  static List<Order> allOrders = [
+    // Request(
+    //   id: 0,
+    //   state: OrderState.completed,
+    //   driver: Driver(
+    //       id: 0,
+    //       user: User(
+    //           id: 0,
+    //           name: "Ahmed Magdy",
+    //           image:
+    //               "https://caricom.org/wp-content/uploads/Floyd-Morris-Remake-1024x879-1.jpg",
+    //           rank: "Gold Member",
+    //           phone: "0122158746",
+    //           email: "ahmedmagdy@gmail.com",
+    //           rate: 3.5,
+    //           totalRequests: 32,
+    //           totalShipments: 26),
+    //       vehicle: Vehicle(
+    //           id: 0, model: "Mercedes - Actros - White ", number: "BWG - 172")),
+    // ),
+    Order(
       id: 1,
-      state: OrderState.Compleated,
+      state: OrderState.completed,
     ),
-    Request(
+    Order(
       id: 2,
-      state: OrderState.Pending,
+      state: OrderState.pending,
     ),
-    Request(
-      id: 3,
-      state: OrderState.Rejected,
-    ),
-    Request(
-      id: 4,
-      state: OrderState.InProgress,
-    ),
-    Request(
-      id: 5,
-      state: OrderState.Canceled,
-    ),
+    Order(id: 3, state: OrderState.inProgress,),
   ];
 
-  static List<AppNotification> notifications = [
-    AppNotification(
-      id: 0,
-      message: "Take a minute to rate the driver",
-      order: oldRequests[0],
-      notificationType: NotificationType.approved,
-    ),
-    AppNotification(
-      id: 0,
-      message: "Request has been approved",
-      order: oldRequests[3],
-      notificationType: NotificationType.rejected,
-    ),
-    AppNotification(
-      id: 0,
-      message: "Take a minute to rate the driver",
-      order: oldRequests[5],
-      notificationType: NotificationType.rateDriver,
-    ),
-    AppNotification(
-      id: 0,
-      message: "Take a minute to rate the driver",
-      order: oldRequests[5],
-      notificationType: NotificationType.wrong,
-    ),
-  ];
+  // static List<AppNotification> notifications = [
+  //   AppNotification(
+  //     id: 0,
+  //     message: "Take a minute to rate the driver",
+  //     order: oldRequests[0],
+  //     notificationType: NotificationType.approved,
+  //   ),
+  //   AppNotification(
+  //     id: 0,
+  //     message: "Request has been approved",
+  //     order: oldRequests[3],
+  //     notificationType: NotificationType.rejected,
+  //   ),
+  //   AppNotification(
+  //     id: 0,
+  //     message: "Take a minute to rate the driver",
+  //     order: oldRequests[5],
+  //     notificationType: NotificationType.rateDriver,
+  //   ),
+  //   AppNotification(
+  //     id: 0,
+  //     message: "Take a minute to rate the driver",
+  //     order: oldRequests[5],
+  //     notificationType: NotificationType.wrong,
+  //   ),
+  // ];
 
   static List<String> productsType = [
     "cars",

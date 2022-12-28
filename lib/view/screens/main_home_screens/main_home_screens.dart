@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:terilla_contractor/core/utils/icons_manager.dart';
-import 'package:terilla_contractor/view/screens/main_home_screens/requests%20screen/requests_screen.dart';
+import 'package:terilla_contractor/view/screens/main_home_screens/requests%20screen/transportations_screen.dart';
 
 import '../../../core/utils/app_assets.dart';
 import '../../../core/utils/app_colors.dart';
