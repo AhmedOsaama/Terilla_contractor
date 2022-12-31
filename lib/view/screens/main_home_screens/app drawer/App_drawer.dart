@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:terilla_contractor/config/routes/app_navigator.dart';
+import 'package:terilla_contractor/core/utils/assets_manager.dart';
+import 'package:terilla_contractor/core/utils/icons_manager.dart';
+import 'package:terilla_contractor/core/utils/style_utils.dart';
+import 'package:terilla_contractor/view/screens/car_selection_screen/car_selection_screen.dart';
+import 'package:terilla_contractor/view/screens/profile_screen/all_cars_screen.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -8,6 +15,7 @@ import '../../../../data/demo_data.dart';
 import '../../../widgets/circle_image.dart';
 import '../../../widgets/my_button.dart';
 import '../../../widgets/profile_analitc.dart';
+import '../../profile_screen/profile_screen.dart';
 
 class AppDrawer extends StatefulWidget {
   const AppDrawer({super.key});
@@ -20,7 +28,7 @@ class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: AppColors.darkColot,
+      backgroundColor: Colors.white,
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -37,39 +45,20 @@ class _AppDrawerState extends State<AppDrawer> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Text(AppStrings.contractor,style: TextStyles.textViewMedium16.copyWith(color: AppColors.darkPrimary),),
+                      SizedBox(height: 10.h,),
                       Text(
                         DemoData.userData.name,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                        ),
+                        style: TextStyles.textViewRegular18.copyWith(color: AppColors.lightPrimary),
                       ),
                       const SizedBox(height: 8),
-                      Row(
-                        children: [
-                          const Icon(
-                            Icons.star,
-                            color: AppColors.primary,
-                            size: 18,
-                          ),
-                          Text(
-                            DemoData.userData.rank,
-                            style: TextStyle(
-                              color: AppColors.primary,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: "Cairo",
-                            ),
-                          )
-                        ],
-                      )
                     ],
                   ),
                 ],
               ),
               const SizedBox(height: 30),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ProfileAnalytics(
                     iconUrl: AppAssets.profRateIcon,
@@ -81,11 +70,6 @@ class _AppDrawerState extends State<AppDrawer> {
                     value: DemoData.userData.totalRequests.toString(),
                     name: AppStrings.TotalRequests,
                   ),
-                  ProfileAnalytics(
-                    iconUrl: AppAssets.profShipmentsIcon,
-                    value: DemoData.userData.totalShipments.toString(),
-                    name: AppStrings.TotalShipments,
-                  ),
                 ],
               ),
               const SizedBox(height: 32),
@@ -93,35 +77,33 @@ class _AppDrawerState extends State<AppDrawer> {
                 padding: const EdgeInsets.symmetric(horizontal: 13),
                 child: MyButton(
                   onClick: () {
-                    // Navigator.pushNamed(context, AppRoutes.profile);
+                    AppNavigator.push(context: context, screen: ProfileScreen());
                   },
                   title: AppStrings.Viewprofile,
                   width: double.infinity,
                 ),
               ),
               const SizedBox(height: 16),
-              Container(
-                height: 2,
-                width: double.infinity,
-                color: AppColors.data,
-              ),
-              const SizedBox(height: 24),
               InkWell(
                 onTap: () {
-                  // TODO send friend invtation
+                  AppNavigator.push(context: context, screen: AllCarsScreen());
                 },
-                child: Padding(
+                child: Container(
                   padding: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: Colors.black12)
+                  ),
                   child: Row(
                     children: [
-                      SvgPicture.asset(AppAssets.giftIcon),
-                      const SizedBox(width: 20),
+                      SvgPicture.asset(truck2,width: 21,height: 22,),
+                      const SizedBox(width: 15),
                       Expanded(
                         child: Text(
-                          AppStrings.InviteFriends,
+                          AppStrings.cars,
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.white,
+                            color: AppColors.darkPrimary,
                           ),
                         ),
                       ),
@@ -129,46 +111,27 @@ class _AppDrawerState extends State<AppDrawer> {
                   ),
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  // Navigator.pushNamed(context, AppRoutes.notification);
-                },
-                child: Padding(
-                  padding: EdgeInsets.all(12),
-                  child: Row(
-                    children: [
-                      SvgPicture.asset(AppAssets.notificationIcon,
-                          color: Colors.white),
-                      const SizedBox(width: 20),
-                      Expanded(
-                        child: Text(
-                          AppStrings.Notifications,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const SizedBox(height: 16),
               InkWell(
                 onTap: () {
                   // TODO logout
                 },
-                child: Padding(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(color: Colors.black12)
+                  ),
                   padding: EdgeInsets.all(12),
                   child: Row(
                     children: [
-                      SvgPicture.asset(AppAssets.logoutIcon),
+                      SvgPicture.asset(AppAssets.logoutIcon,color: AppColors.lightPrimary,),
                       const SizedBox(width: 20),
                       Expanded(
                         child: Text(
                           AppStrings.Logout,
                           style: const TextStyle(
                             fontSize: 16,
-                            color: Colors.white,
+                            color: AppColors.darkPrimary,
                           ),
                         ),
                       ),

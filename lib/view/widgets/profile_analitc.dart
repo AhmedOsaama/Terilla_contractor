@@ -27,7 +27,7 @@ class ProfileAnalytics extends StatelessWidget {
           height: 35,
           width: 35,
         ),
-        const SizedBox(height: 12),
+        const SizedBox(height: 5),
         Text(
           value,
           style: const TextStyle(
@@ -36,12 +36,12 @@ class ProfileAnalytics extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-        const SizedBox(height: 6),
+        const SizedBox(height: 2),
         Text(
           name,
           style: const TextStyle(
             fontSize: 12,
-            color: Colors.white,
+            color: AppColors.darkPrimary,
           ),
         )
       ],

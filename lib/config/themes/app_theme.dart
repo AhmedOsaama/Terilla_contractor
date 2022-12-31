@@ -9,7 +9,7 @@ ThemeData getAppTheme(BuildContext context) {
   return ThemeData(
     // colors
     primaryColor: AppColors.primary,
-    secondaryHeaderColor: AppColors.darkColot,
+    secondaryHeaderColor: AppColors.darkColor,
     splashColor: AppColors.border,
     highlightColor: AppColors.border.withOpacity(0.5),
     disabledColor: AppColors.data,
@@ -21,13 +21,13 @@ ThemeData getAppTheme(BuildContext context) {
       color: Colors.white,
       elevation: AppConstants.appBarElevation,
       shadowColor: AppColors.data.withOpacity(0.1),
-      foregroundColor: AppColors.darkColot,
+      foregroundColor: AppColors.darkColor,
       systemOverlayStyle: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
       ),
       titleTextStyle: TextStyle(
-        color: AppColors.darkColot,
+        color: AppColors.darkColor,
         fontSize: 18.sp,
         fontFamily: "Poppins",
       ),

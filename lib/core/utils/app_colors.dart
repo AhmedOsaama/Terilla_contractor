@@ -4,6 +4,7 @@ class AppColors {
   static const Color primary = Color(0xffEF651E);
   static const Color lightPrimary = Color(0xffFF8900);
   static const Color darkPrimary = Color.fromRGBO(36, 46, 66, 1);
+  // static const Color darkPrimary = Color(0x40C7C7C7);
   static const Color darkPrimaryHalf = Color.fromRGBO(36, 46, 66, 0.5);
   static const Color selectedContainer = Color.fromRGBO(255, 229, 206, 1);
   static const Color sectionHeader = Color.fromRGBO(36, 46, 66, 0.38);
@@ -13,7 +14,7 @@ class AppColors {
   static const Color body2 = Color(0xff677183);
   static const Color head = Color(0xff383838);
   static const Color border = Color(0xffD9D9D9);
-  static const Color darkColot = Color(0xff1B2A44);
+  static const Color darkColor = Color(0xff1B2A44);
   static const Color success = Color(0xff5AC8FA);
   static const Color pinding = primary;
   static const Color approved = Color(0xff65B07F);

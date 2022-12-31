@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:terilla_contractor/core/utils/icons_manager.dart';
-import 'package:terilla_contractor/view/screens/main_home_screens/requests%20screen/transportations_screen.dart';
+import 'package:terilla_contractor/view/screens/main_home_screens/transportations_screen/transportations_screen.dart';
 
 import '../../../core/utils/app_assets.dart';
 import '../../../core/utils/app_colors.dart';
@@ -33,7 +33,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     List<Widget> pages = [
       NotificationScreen(),
       HomeScreen(),
-      const RequestsScreen(),
+      const TransportationsScreen(),
     ];
     return pages[pageIndex];
   }
@@ -41,9 +41,9 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   String? getAppBarTitle(int pageIndex) {
     switch (pageIndex) {
       case 0:
-        return AppStrings.History;
+        return AppStrings.notifications;
       case 2:
-        return AppStrings.Requests;
+        return AppStrings.shippings;
       default:
         return null;
     }

@@ -95,7 +95,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Text("Abort",style: TextStyles.textViewSemiBold14,),
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                            backgroundColor: AppColors.darkPrimary.withOpacity(0.25),
+                            backgroundColor: AppColors.darkPrimary,
+                            elevation: 0
                           ),
                         )),
                       ],

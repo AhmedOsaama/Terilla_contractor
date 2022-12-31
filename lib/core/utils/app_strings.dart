@@ -66,6 +66,7 @@ class AppStrings {
   static String home = "Home".tr();
   static String shippings = "Shippings".tr();
   static String notification = "Notification".tr();
+  static String notifications = "Notifications".tr();
   static String product = "Frozen Potatoes".tr();
   static String productType = "Product Type".tr();
   static String shipmentWeight = "Shipment Weight".tr();
@@ -93,15 +94,22 @@ class AppStrings {
 
   //transportation detail screen
   static String transportationWillStartIn = "Transportation Will Start in 26/8/2022".tr();
+  static String transportationWillArriveOn = "Transportation Will Arrive On 26/8/2022".tr();
+  static String transportationHasFinishedOn = "Transportation Has Finished on 26/8/2022".tr();
   static String clientInfo = "Client Info".tr();
   static String numberOfRequests = "Number of Requests".tr();
   static String requestInfo = "Request Info".tr();
   static String beginTransportation = "Begin Transportation".tr();
+  static String endTransportation = "End Transportation".tr();
   static String phoneNumber = "Phone Number".tr();
+  static String doYouWantToDelete = "Do you want to delete transportation ?".tr();
+  static String transportationDeleted = "Transportation has been deleted".tr();
+  static String abort = "Abort".tr();
 
 
   // drawer
   static String Ratings = "Ratings".tr();
+  static String contractor = "Contractor".tr();
   static String TotalRequests = "Total Requests".tr();
   static String TotalShipments = "Total Shipments".tr();
   static String Viewprofile = "View profile".tr();
@@ -125,11 +133,12 @@ class AppStrings {
   static String more = "More".tr();
 
   // profile
-  static String Profile = "Profile".tr();
+  static String profile = "Profile".tr();
   static String Edit = "Edit".tr();
-  static String UserName = "User Name".tr();
+  static String userName = "User Name".tr();
   static String PhoneNumber = "Phone Number".tr();
-  static String Address = "Address".tr();
+  static String address = "Address".tr();
+  static String information = "Information".tr();
 
   // edit profile
   static String EditProfile = "Edit Profile".tr();
@@ -137,6 +146,10 @@ class AppStrings {
   static String Firstname = "First name".tr();
   static String Lastname = "Last name".tr();
   static String Done = "Done".tr();
+
+  //all cars screen
+  static String lookForACar = "Look for a car".tr();
+
 
   // add request
   static String AddRequest = "Add Request".tr();
@@ -190,6 +203,7 @@ class AppStrings {
   static String ShipmentFare = "Shipment Fare".tr();
   static String All = "All".tr();
   static String Deposit = "Deposit".tr();
+
 
   static String CancelRequest = "Cancel Request".tr();
   static String Price = "Price".tr();

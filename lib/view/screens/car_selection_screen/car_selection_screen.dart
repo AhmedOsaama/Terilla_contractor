@@ -5,6 +5,7 @@ import 'package:terilla_contractor/core/utils/app_colors.dart';
 import 'package:terilla_contractor/core/utils/app_strings.dart';
 import 'package:terilla_contractor/core/utils/assets_manager.dart';
 import 'package:terilla_contractor/core/utils/style_utils.dart';
+import 'package:terilla_contractor/data/models/order_state.dart';
 import 'package:terilla_contractor/view/screens/car_selection_screen/add_car_screen.dart';
 import 'package:terilla_contractor/view/screens/car_selection_screen/transportation_details_screen.dart';
 import 'package:terilla_contractor/view/widgets/my_app_bar.dart';
@@ -26,7 +27,7 @@ class _CarSelectionScreenState extends State<CarSelectionScreen> {
         margin: EdgeInsets.symmetric(horizontal: 20.w),
         width: double.infinity,
         child: ElevatedButton(
-          onPressed: () => AppNavigator.push(context: context, screen: TransportationDetailScreen()),
+          onPressed: () => AppNavigator.push(context: context, screen: TransportationDetailScreen(orderState: OrderState.pending,)),
           child: Text(AppStrings.confirm,),
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
