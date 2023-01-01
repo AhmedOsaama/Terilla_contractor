@@ -60,6 +60,7 @@ class _TransportationDetailScreenState extends State<TransportationDetailScreen>
                   Expanded(child: ElevatedButton(
                     onPressed: (){
                       //TODO: call api here
+                      AppNavigator.pop(context: context);
                       showDialog(context: context,
                           barrierDismissible: false,
                           builder: (ctx) => Dialog(

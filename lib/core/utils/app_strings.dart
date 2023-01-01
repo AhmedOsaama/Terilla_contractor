@@ -83,6 +83,11 @@ class AppStrings {
   static String carName = "Mercedes Actros - 2021".tr();
   static String weight = "Weight".tr();
   static String confirm = "Confirm".tr();
+  static String addDriver = "Add driver".tr();
+  static String enterNameOfDriver = "Enter the name of the driver you want to add".tr();
+  static String driverRequestSentSuccessfully = "The request has been sent successfully".tr();
+  static String sendRequest = "Send Request".tr();
+
 
   //add car screen
   static String addCar = "Add Car".tr();
