@@ -1,6 +1,6 @@
 # terilla_contractor
 
-An Addicta Project
+A terilla contractor app
 
 ## Getting Started
 
